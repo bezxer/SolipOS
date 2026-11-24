@@ -4,6 +4,13 @@ SolipOS turns a browser tab into the control room of your home server. Open it a
 
 It runs as a single Docker container and talks to the Docker engine on the host, so you can try it in a minute and remove it just as fast.
 
+<img width="1440" height="809" alt="Screenshot 2026-11-24 at 9 54 26 AM" src="https://github.com/user-attachments/assets/3de8a3a6-42e2-46f1-b378-f6575d3f41ab" />
+
+<img width="1440" height="808" alt="Screenshot 2026-11-24 at 10 00 55 AM" src="https://github.com/user-attachments/assets/da702027-edbc-4033-8f72-bb032e00c53b" />
+
+<img width="1440" height="808" alt="Screenshot 2026-11-24 at 10 00 00 AM" src="https://github.com/user-attachments/assets/98253e1b-3039-4a2f-b6e9-b23f0d593d1c" />
+
+
 ## What it does
 
 - **Keeps an eye on the server.** CPU, memory, disk and Docker are on screen the moment you log in, and they update while you watch.
