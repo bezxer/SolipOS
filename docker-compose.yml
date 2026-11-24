@@ -1,0 +1,20 @@
+services:
+  solipos:
+    build: .
+    container_name: solipos
+    restart: unless-stopped
+    ports:
+      - "7745:7745"
+    environment:
+      - PORT=7745
+      - FILES_ROOT=/host
+      - USE_NSENTER=1
+      - APPS_DIR=/opt/solipos/apps
+      - DATA_DIR=/data
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /:/host
+      - /opt/solipos/apps:/opt/solipos/apps
+      - /opt/solipos/data:/data
+    pid: host
+    privileged: true

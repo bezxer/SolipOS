@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uk" data-palette="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SolipOS</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2317171f'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='600' fill='%23fff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<script>try{var p=localStorage.getItem('sp.palette');if(p===null||p==='auto')p=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.palette=(p==='dark'||p==='light')?p:'light'}catch(e){document.documentElement.dataset.palette='light'}</script>
+<link rel="preload" href="/vendor/font/geologica-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/vendor/font/geologica-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/vendor/xterm/css/xterm.css">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/shell.css">
+<link rel="stylesheet" href="/css/views.css">
+<link rel="stylesheet" href="/css/containers.css">
+<link rel="stylesheet" href="/css/popups.css">
+<link rel="stylesheet" href="/css/login.css">
+<link rel="stylesheet" href="/css/phone.css">
+</head>
+<body>
+<div id="wall" aria-hidden="true"></div>
+<main class="desk" id="desk"></main>
+<div id="wins"></div>
+<nav class="dock" id="dock"></nav>
+<div class="login" id="login" hidden>
+  <div class="lk-time" aria-hidden="true"><div class="lk-tm" data-lt></div><div class="lk-dt" data-ld></div></div>
+  <form class="lk-card" novalidate>
+    <div class="lk-title setup-only"><b data-i18n="setup.title"></b><span data-i18n="setup.first"></span></div>
+    <div class="lk-av login-only" aria-hidden="true"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+    <label class="lk-f"><span data-i18n="login.user"></span><input class="in" id="user" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="32" required></label>
+    <label class="lk-f"><span data-i18n="login.password"></span>
+      <span class="lk-pw"><input class="in" id="pw" type="password" autocomplete="current-password" required><button type="button" class="btn ghost ib" id="pwEye"></button></span>
+      <span class="lk-meter setup-only" aria-live="polite"><span class="meter"><i></i></span><span data-strength></span></span></label>
+    <label class="lk-f setup-only"><span data-i18n="setup.repeat"></span><input class="in" id="pw2" type="password" autocomplete="new-password"></label>
+    <div class="lk-row"><label class="lk-rem login-only"><input type="checkbox" class="sw" id="remember" checked><span data-i18n="login.remember"></span></label><span class="lk-caps" id="caps" hidden data-i18n="login.caps"></span></div>
+    <button class="btn pri lg lk-go" id="loginBtn"><span class="login-only" data-i18n="login.enter"></span><span class="setup-only" data-i18n="setup.go"></span><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <div class="lk-err" id="loginErr" role="alert"></div>
+  </form>
+</div>
+<div id="toasts"></div>
+<input type="file" id="filePick" hidden>
+<script src="/vendor/xterm/lib/xterm.js"></script>
+<script src="/vendor/xterm-fit/lib/addon-fit.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/core.js"></script>
+<script src="/js/wm.js"></script>
+<script src="/js/apps.js"></script>
+<script src="/js/containers.js"></script>
+<script src="/js/images.js"></script>
+<script src="/js/files.js"></script>
+<script src="/js/tools.js"></script>
+<script src="/js/desk.js"></script>
+<script src="/js/install.js"></script>
+<script src="/js/settings.js"></script>
+<script src="/js/boot.js"></script>
+</body>
+</html>
